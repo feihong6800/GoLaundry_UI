@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_below="@id/tv_last_recently"
+    android:layout_marginTop="10dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/laundry_image"
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/image" />
+
+        <TextView
+            android:id="@+id/tv_laundry_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/laundry_image"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:text="Dry Cleaning Laundry"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_laundry_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:text="5.0 "
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <RatingBar
+            android:id="@+id/rating_star"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_laundry_name"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@id/tv_rating"
+            android:numStars="5"
+            android:progressTint="#195860"
+            android:rating="2.5" />
+
+        <TextView
+            android:id="@+id/tv_service_chosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rating"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:text="Distance: "
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rating"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@id/tv_service_chosen"
+            android:text="13.5km"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/laundry_image"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_right"
+            app:tint="#0C8292" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/iv_right"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="17dp"
+            android:src="@drawable/ic_love" />
+
+        <com.greenfrvr.hashtagview.HashtagView
+            android:id="@+id/hashtag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/tv_service_chosen">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Washing"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="#0C8292"
+                android:textSize="12sp"/>
+
+        </com.greenfrvr.hashtagview.HashtagView>
+
+        <com.greenfrvr.hashtagview.HashtagView
+            android:id="@+id/hashtag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/hashtag1"
+            android:layout_below="@id/tv_service_chosen">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ironning"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="#0C8292"
+                android:textSize="12sp"/>
+        </com.greenfrvr.hashtagview.HashtagView>
+
+        <com.greenfrvr.hashtagview.HashtagView
+            android:id="@+id/hashtag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/hashtag2"
+            android:layout_below="@id/tv_service_chosen">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dry Cleaning"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="#0C8292"
+                android:textSize="12sp"/>
+
+        </com.greenfrvr.hashtagview.HashtagView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

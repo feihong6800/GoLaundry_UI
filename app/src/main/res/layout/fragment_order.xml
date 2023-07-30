@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6EFEE"
+    tools:context=".HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_go_laundry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/courgette_regular"
+            android:shadowColor="#000000"
+            android:shadowDx="10"
+            android:shadowDy="5"
+            android:shadowRadius="1"
+            android:text="Go-Laundry"
+            android:textAlignment="center"
+            android:textColor="#FFC0AB88"
+            android:textSize="25sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/custom_button"
+                android:drawableEnd="@drawable/ic_search"
+                android:hint="Search laundry shop"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_last_recently"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_search_bar"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="17dp"
+                android:text="Last recently ordered"
+                android:textColor="#0C8292"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recently_laundry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_below="@id/tv_last_recently"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="22dp"
+                android:backgroundTint="@color/primary_green"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_laundry_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="19dp"
+                        android:text="Dry Cleaning Laundry"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_laundry_name"
+                        android:layout_marginStart="18dp"
+                        android:text="5.0 "
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <RatingBar
+                        android:id="@+id/rating_star"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_laundry_name"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@id/tv_rating"
+                        android:numStars="5"
+                        android:progressTint="@color/white"
+                        android:rating="2.5" />
+
+                    <TextView
+                        android:id="@+id/tv_service_chosen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_rating"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Services chosen: "
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_rating"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_toEndOf="@id/tv_service_chosen"
+                        android:text="Washing, Ironing"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_service_chosen"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/custom_button"
+                        android:backgroundTint="#D6EFEE"
+                        android:text="Repeat Order" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recently_laundry"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="17dp"
+                android:text="Discover"
+                android:textColor="#0C8292"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_default_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recently_laundry"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="25dp"
+                android:text="Default Address"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_discover"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="5dp"
+                android:text="All"
+                android:textColor="#0C8292"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_default_address"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:text="Filter"
+                android:textColor="#195860"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_all"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="23dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_filter_laundry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="25dp"
+                android:text="Filter laundry shops"
+                android:textColor="#0C8292"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_filter_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_below="@id/tv_filter_laundry"
+                android:text="Ratings: "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_filter_rating_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="1dp"
+                android:layout_below="@id/tv_filter_laundry"
+                android:layout_toEndOf="@id/tv_filter_rating"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <SeekBar
+                android:id="@+id/rating_seekbar"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:layout_marginTop="33dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:progress="4"
+                android:progressTint="#0C8292"
+                android:thumbTint="#0C8292"
+                android:layout_below="@id/tv_filter_rating"/>
+
+            <TextView
+                android:id="@+id/tv_filter_rating_seekbar_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/rating_seekbar"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_filter_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="14dp"
+                android:layout_below="@id/tv_filter_rating_seekbar_number"
+                android:text="Distance: "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_filter_distance_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="1dp"
+                android:layout_below="@id/tv_filter_rating_seekbar_number"
+                android:layout_toEndOf="@id/tv_filter_distance"
+                android:text="3km"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <SeekBar
+                android:id="@+id/distance_seekbar"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:progress="3"
+                android:progressTint="#0C8292"
+                android:thumbTint="#0C8292"
+                android:layout_below="@id/tv_filter_distance"/>
+
+            <TextView
+                android:id="@+id/tv_filter_distance_seekbar_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/distance_seekbar"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_filter_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="14dp"
+                android:layout_below="@id/tv_filter_distance_seekbar_number"
+                android:text="Services: "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/service1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="9dp"
+                android:layout_below="@id/tv_filter_service">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tv_washing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:background="@drawable/custom_button"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:text="Washing"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tv_ironing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:background="@drawable/custom_button"
+                    android:backgroundTint="#0C8292"
+                    android:textColor="@color/white"
+                    android:text="Ironing"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tv_drying"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:background="@drawable/custom_button"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:text="Drying"
+                    android:layout_marginEnd="11dp"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/service2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/service1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tv_dry_cleaning"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:background="@drawable/custom_button"
+                    android:backgroundTint="#0C8292"
+                    android:textColor="@color/white"
+                    android:text="Dry Cleaning"
+                    android:layout_marginEnd="11dp"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="46dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/custom_button"
+                android:layout_below="@id/service2"
+                android:backgroundTint="#D6EFEE"
+                android:textColor="@color/black"
+                android:text="Filter"
+                android:layout_marginEnd="15dp"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

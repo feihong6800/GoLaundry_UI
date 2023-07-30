@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_green"
+    tools:context=".HelpCenterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/help_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentTop="true"
+                android:elevation="4dp" />
+
+            <TextView
+                android:id="@+id/tv_go_laundry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/help_toolbar"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/courgette_regular"
+                android:gravity="center_horizontal|center_vertical"
+                android:shadowColor="#000000"
+                android:shadowDx="10"
+                android:shadowDy="5"
+                android:shadowRadius="1"
+                android:text="Go-Laundry"
+                android:textAlignment="center"
+                android:textColor="#FFC0AB88"
+                android:textFontWeight="400"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_go_laundry"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="41dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Help Center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_login"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="We are here for you! How can we help?"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_subtitle"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="37dp"
+                android:gravity="top"
+                android:text="Email Address"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_email"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="42dp"
+                android:background="@drawable/custom_login"
+                android:hint="Enter Email Address"
+                android:inputType="textEmailAddress"
+                android:maxLength="7"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_email"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="20dp"
+                android:gravity="top"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="42dp"
+                android:background="@drawable/custom_login"
+                android:hint="Enter title"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_title"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="20dp"
+                android:gravity="top"
+                android:text="What trouble do you faces?"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_message"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="42dp"
+                android:background="@drawable/custom_login"
+                android:gravity="top"
+                android:hint="Enter Message"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:padding="15dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_message"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="27dp"
+                android:text="We will get back to you within 3 working days"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_error_message"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="42dp"
+                android:layout_marginBottom="46dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="#D6EFEE"
+                android:text="Submit"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
