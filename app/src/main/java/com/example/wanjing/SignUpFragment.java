@@ -1,7 +1,9 @@
 package com.example.wanjing;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -37,6 +39,8 @@ public class SignUpFragment extends Fragment {
      * @return A new instance of fragment SignUpFragment.
      */
     // TODO: Rename and change types and number of parameters
+
+    private AppCompatButton btn_user;
     public static SignUpFragment newInstance(String param1, String param2) {
         SignUpFragment fragment = new SignUpFragment();
         Bundle args = new Bundle();
@@ -59,6 +63,18 @@ public class SignUpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, container, false);
+        View view =  inflater.inflate(R.layout.fragment_sign_up, container, false);
+        btn_user = view.findViewById(R.id.btn_user);
+
+        btn_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), UserSignUpActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 }
