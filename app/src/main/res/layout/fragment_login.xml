@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#195860"
     tools:context=".LoginFragment">
 
@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:fontFamily="@font/courgette_regular"
         android:gravity="center_horizontal|center_vertical"
         android:shadowColor="#000000"
@@ -31,7 +31,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@id/tv_go_laundry"
-        android:layout_centerInParent="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="52dp"
         android:src="@drawable/ic_person_2" />
 

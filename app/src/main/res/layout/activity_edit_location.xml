@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_green"
-    tools:context=".RepeatOrderLocationActivity">
+    tools:context=".EditLocationActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/repeat_order_toolbar"
@@ -43,41 +43,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/tv_my_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="19dp"
+                android:text="My Addresses"
+                android:textColor="#C0AB88"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_my_address"
+                android:layout_marginTop="1dp"/>
+
             <LinearLayout
                 android:id="@+id/linear1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2"
+                android:layout_below="@id/rv_address"
                 android:orientation="horizontal">
 
                 <include
-                    layout="@layout/repeat_order_location"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:layout_below="@id/linear1"
-                android:orientation="horizontal">
-
-                <include
-                    layout="@layout/repeat_order_date"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:layout_below="@id/linear2"
-                android:orientation="horizontal">
-
-                <include
-                    layout="@layout/repeat_order_price"/>
+                    layout="@layout/location_new_address"/>
 
             </LinearLayout>
 
@@ -91,8 +86,8 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/custom_button"
                 android:backgroundTint="#D6EFEE"
-                android:text="Place Order"
-                android:layout_below="@id/linear3"
+                android:text="Done"
+                android:layout_below="@id/linear1"
                 android:layout_alignParentBottom="true"/>
         </RelativeLayout>
     </ScrollView>
