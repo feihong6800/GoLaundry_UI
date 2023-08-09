@@ -40,6 +40,7 @@ public class HomeActivity extends AppCompatActivity{
                         break;
 
                     case 2:
+                        replace(new HistoryFragment());
                         break;
 
                     case 3:
