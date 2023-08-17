@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_green"
+    tools:context=".RatingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/repeat_order_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_go_laundry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/courgette_regular"
+            android:shadowColor="#000000"
+            android:shadowDx="10"
+            android:shadowDy="5"
+            android:shadowRadius="1"
+            android:text="Go-Laundry"
+            android:textAlignment="center"
+            android:textColor="#FFC0AB88"
+            android:textSize="25sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/repeat_order_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_rider_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="28dp"
+                android:text="Rate Order"
+                android:textStyle="bold"
+                android:textColor="@color/gold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_laundry_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/tv_rider_info"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="40dp"
+                android:text="Laundry Service:"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rating_star"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_laundry_service"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:numStars="5"
+                android:progressTint="@color/white"
+                android:rating="2.5"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/tv_laundry_service_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/rating_star"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="10dp"
+                android:text="Laundry Service:(optional)"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_laundry_service"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_laundry_service_msg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:gravity="center_horizontal|left"
+                android:hint="Tell this laundy shop..."
+                android:inputType="textMultiLine"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"/>
+
+
+            <TextView
+                android:id="@+id/tv_rider_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/et_laundry_service"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="48dp"
+                android:text="Laundry Service:"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rider_rating_star"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_rider_service"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:numStars="5"
+                android:progressTint="@color/white"
+                android:rating="2.5"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/tv_rider_service_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/rider_rating_star"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="10dp"
+                android:text="Rider Service:(optional)"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_rider_service_note"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_rider_service_msg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:gravity="center_horizontal|left"
+                android:hint="Tell this rider..."
+                android:inputType="textMultiLine"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_repeat_order_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="78dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="#D6EFEE"
+                android:text="Done"
+                android:layout_below="@id/et_rider_service_note"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
