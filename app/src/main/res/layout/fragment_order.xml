@@ -55,7 +55,8 @@
                 android:drawableEnd="@drawable/ic_search"
                 android:hint="Search laundry shop"
                 android:padding="10dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/tv_last_recently"
