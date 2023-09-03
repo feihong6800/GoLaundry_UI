@@ -8,6 +8,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -20,13 +26,22 @@
         android:theme="@style/Theme.WanJing"
         tools:targetApi="31">
         <activity
+            android:name=".LaundryProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RiderProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SavedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".MembershipActivity"
             android:exported="false" />
         <activity
             android:name=".ResetPasswordActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".RatingActivity"
@@ -35,13 +50,7 @@
             android:name=".RiderInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChooseAdressActivity"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".NewAddressActivity"
@@ -133,7 +142,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseAdressActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -148,7 +163,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDR5T08UcS8HjP3q6G0x5jOcu27Lc5HBLs" />
+            android:value="AIzaSyA9Zw3hiKJnTieGmuIAhxY9kDFxHsN8TAg" />
     </application>
 
 </manifest>
