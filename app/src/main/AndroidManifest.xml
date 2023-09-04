@@ -26,6 +26,33 @@
         android:theme="@style/Theme.WanJing"
         tools:targetApi="31">
         <activity
+            android:name=".RiderMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RiderViewOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundryRatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPasswordSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FindOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LaundrySetupActivity"
+            android:exported="false" />
+        <activity
             android:name=".LaundryProfileActivity"
             android:exported="false" />
         <activity
