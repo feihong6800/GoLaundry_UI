@@ -491,6 +491,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/et_order_id">
 
@@ -501,7 +504,6 @@
                             android:layout_marginTop="36dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
-                            android:padding="10dp"
                             android:text="OK"
                             android:textColor="@color/black"
                             android:textSize="15sp"
@@ -515,7 +517,6 @@
                             android:layout_marginTop="36dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
-                            android:padding="10dp"
                             android:text="CANCEL"
                             android:textColor="@color/black"
                             android:textSize="15sp"
