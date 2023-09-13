@@ -171,9 +171,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="42dp"
                 android:background="@drawable/custom_login"
-                app:prefixText="+60 "
                 app:hintEnabled="false"
                 app:hintTextColor="@color/white"
+                app:prefixText="+60 "
                 app:prefixTextAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:prefixTextColor="@color/white">
 
@@ -181,12 +181,12 @@
                     android:id="@+id/et_phonenumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#195860"
+                    android:background="@drawable/custom_login"
+                    android:hint="Enter phone number"
                     android:inputType="phone"
                     android:maxLength="10"
-                    android:hint="Enter phone number"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/text_color"/>
+                    android:textColorHint="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -280,25 +280,25 @@
                 android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/et_confirm_password"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="35dp"
-                android:text="I agree to Terms &amp; Conditions"
                 android:buttonTint="@color/white"
-                android:textColor="@color/white"
-                android:layout_below="@id/et_confirm_password" />
+                android:text="I agree to Terms &amp; Conditions"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/checkBox"
                 android:layout_marginStart="42dp"
-                android:layout_marginEnd="42dp"
                 android:layout_marginTop="19dp"
+                android:layout_marginEnd="42dp"
                 android:layout_marginBottom="46dp"
                 android:background="@drawable/custom_button"
                 android:backgroundTint="#D6EFEE"
-                android:text="Register"
-                android:layout_below="@id/checkBox"/>
+                android:text="Register" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

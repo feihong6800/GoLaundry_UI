@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "317671828886",
+    "project_id": "golaundrytest",
+    "storage_bucket": "golaundrytest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317671828886:android:e120b0aa07b6c99ae0c1b7",
+        "android_client_info": {
+          "package_name": "com.example.wanjing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8xSRNqdE3755FipuOdERKNhzaQNIUFa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

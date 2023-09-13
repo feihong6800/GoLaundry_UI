@@ -89,7 +89,7 @@
                 android:layout_marginBottom="5dp"
                 android:inputType="textMultiLine"
                 android:background="@drawable/custom_manage"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/text_color"
                 android:textSize="16sp" />
 
@@ -118,7 +118,7 @@
                 android:layout_marginBottom="5dp"
                 android:inputType="textMultiLine"
                 android:background="@drawable/custom_manage"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/text_color"
                 android:textSize="16sp" />
 

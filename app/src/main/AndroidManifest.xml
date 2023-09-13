@@ -169,13 +169,13 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ChooseAdressActivity"
             android:exported="false" />
         <activity
             android:name=".MapsActivity"
             android:exported="false" />
         <activity
-            android:name=".ChooseAdressActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
