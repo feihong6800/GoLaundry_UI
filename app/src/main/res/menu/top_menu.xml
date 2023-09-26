@@ -5,6 +5,6 @@
     <item
         android:id="@+id/btn_notification"
         android:title="Notification"
-        android:icon="@drawable/ic_notification"
+        android:icon="@drawable/ic_notification_gold"
         app:showAsAction="ifRoom"/>
 </menu>

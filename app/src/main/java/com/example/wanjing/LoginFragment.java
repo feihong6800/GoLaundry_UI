@@ -180,4 +180,15 @@ public class LoginFragment extends Fragment {
 
         return view;
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        if (mAuth.getCurrentUser() != null) {
+            getActivity().finish();
+            Intent intent = new Intent(getActivity(), RiderMainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
+    }
 }

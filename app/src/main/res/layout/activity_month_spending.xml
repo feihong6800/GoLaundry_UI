@@ -8,7 +8,7 @@
     tools:context=".NotificationActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/notification_toolbar"
+        android:id="@+id/monthly_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:layout_alignParentTop="true"
@@ -34,7 +34,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/notification_toolbar">
+        android:layout_below="@id/monthly_toolbar">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -92,6 +92,7 @@
                         android:src="@drawable/ic_left" />
 
                     <TextView
+                        android:id="@+id/tv_month"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
@@ -127,7 +128,7 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
-                <com.github.mikephil.charting.charts.BarChart
+                <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/month_chart"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
